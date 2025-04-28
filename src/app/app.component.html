@@ -1,0 +1,30 @@
+<h1>Welcome to {{title}}</h1>
+<h2>Components</h2>
+<table style="width:100%">
+  <tr>
+    <td><app-user></app-user></td>
+    <td><app-admin></app-admin></td>
+  </tr>
+</table>
+
+<app-data-binding></app-data-binding>
+<app-directives></app-directives>
+<app-service-message-sender></app-service-message-sender>
+<app-service-message-receiver></app-service-message-receiver>
+
+<h2>Routing</h2>
+<nav>
+  <a routerLink="/">Home</a><br>
+  <a routerLink="/about">About</a><br>
+  <a routerLink="/contact">Contact</a><br>
+  <a routerLink="/team">Team</a> |
+  <a routerLink="/company">Company</a>
+</nav>
+
+<h2>Forms</h2>
+<nav>
+  <a routerLink="/template-form">Template Form</a> |
+  <a routerLink="/reactive-form">Reactive Form</a>
+</nav>
+<router-outlet></router-outlet>
+<app-http-user></app-http-user>

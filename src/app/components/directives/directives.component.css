@@ -1,0 +1,9 @@
+.pass-style {
+    color: green;
+    font-weight: bold;
+  }
+  
+  .fail-style {
+    color: red;
+    font-weight: bold;
+  }

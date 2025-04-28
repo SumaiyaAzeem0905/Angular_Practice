@@ -1,0 +1,44 @@
+<!-- Interpolation -->
+<div class="row">
+    <div class="col">
+        <h2>Data Binding</h2>
+        <h3>1.Interpolation</h3>
+        <p>firstName=>{{name}}</p>
+        <p>rollNo=>{{rollNo}}</p>
+    </div>
+    <div class="col">
+        <p>studentName=>{{student.name}}</p>
+    </div>
+
+<!-- Property binding -->
+ <div class="col1">
+   <h3>2.Property Binding</h3>
+   <input type="text" [value]="name"><br>
+   <input type="text" [placeholder]="placeholder"><br>
+   <!-- <button [disabled]="!(student.age>20)">Show Student details</button> -->
+
+ 
+<!-- Event binding -->
+ <div class="col2">
+   <h3>3.Event Binding</h3>
+   <button (click)="showStudentDetails()">Show Student details</button><br>
+   <select (change)="onSelect()">
+       <option value="Sumaiya">Sumaiya</option>
+       <option value="Isha">Isha</option>
+       <option value="Nida">Nida</option>
+    </select>
+
+<!-- Two way Binding -->
+    <div class="col3">
+    <h3>4.Two way Binding</h3>
+    <input type="text" [(ngModel)]="name"><br>
+    <select [(ngModel)]="selectedName">
+        <option value="Sumaiya">Sumaiya</option>
+        <option value="Isha">Isha</option>
+        <option value="Nida">Nida</option>
+     </select>
+     {{selectedName}}
+    </div>
+   
+
+

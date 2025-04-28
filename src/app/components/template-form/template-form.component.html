@@ -1,0 +1,23 @@
+<h3>template Driven Form</h3>
+<form #userForm="ngForm" (ngSubmit)="onSubmit()">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="user.name" required><br>
+
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" [(ngModel)]="user.email" required><br>
+
+
+    <label for="age">Age:</label>
+    <input type="text" id="number" name="age" [(ngModel)]="user.age" required><br>
+
+    <button type="submit" [disabled]="!userForm.valid">Submit</button>
+
+</form>
+
+<hr>
+
+<h3>Form Output</h3>
+<p>Name:  {{user.name}}</p>
+<p>Email: {{user.email}}</p>
+<p>Age:  {{user.age}}</p>

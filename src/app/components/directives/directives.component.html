@@ -1,0 +1,63 @@
+<!-- ngIF -->
+<div class="row">
+    <div class="col">
+        <h2>Directives</h2>
+        <h3>1.*ngIf</h3>
+        <button (click)="isLoggedIn=!isLoggedIn">{{isLoggedIn?'Logout':'Login'}}</button><br>
+        <p *ngIf="isLoggedIn">Welcome User!! You are now logged in</p><br>
+    </div>
+    <div class="col">
+        <button (click)="checkProduct=!checkProduct">{{checkProduct?'Check product':'Okayy'}}</button><br>
+        <p *nfIf="checkProduct">Product is in stock</p>
+        <p *ngIf="!checkProduct">Product is out of stock</p><br>
+    </div>
+</div>
+
+
+<!-- *ngFor -->
+<div class="row">
+    <div class="col">
+        <h3>2.*ngFor</h3>
+        <ul>
+            <li *ngFor="let fruit of favouriteFruits">{{fruit}}</li>
+        </ul>
+    </div>
+</div>
+<!-- ngSwitch -->
+     <div class="col">
+        <h3>3.*ngSwitch</h3>
+       
+        <select [(ngModel)]="selectedWeather">
+            <option value="sunny">Sunny</option>
+            <option value="rainy">rainy</option>
+            <option value="cloudy">Cloudy</option>
+        </select><br><br>
+        <div [ngSwitch]="selectedWeather">
+            <p *ngSwitchCase="'sunny'">It is sunny</p>
+            <p *ngSwitchCase="'rainy'">It is rainy</p>
+            <p *ngSwitchCase="'cloudy'">It is cloudy</p>
+            <p *ngSwitchDefault>Weather is unpredictable</p>
+        </div>
+    </div>
+
+<!-- ngClass -->
+
+    <div class="col">
+        <h3>4.*ngClass</h3>
+        <p [ngClass]="resultStatus === 'pass' ? 'pass-style' : 'fail-style'">
+        Isha has {{ resultStatus === 'pass' ? 'passed' : 'failed' }} the exam.
+        </p></div>
+
+<!-- ngStyle -->
+
+    <div class="col">
+        <h3>5.*ngStyle</h3>
+        <p [ngStyle]="{ 'font-size': fontSize, 'background-color': bgColor }">
+            This text has dynamic font size and background color.
+          </p>
+          
+        
+          <p [style.color]="'purple'" [style.fontWeight]="'bold'">
+            This is another way to apply inline styles.
+          </p>
+    </div>
